@@ -8,4 +8,4 @@ debug.php
 *.log
 *.env
 *.sql
-src/output.css
+src\output.css

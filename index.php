@@ -18,7 +18,7 @@
     </div>
     <div class="grid md:grid-cols-5 gap-5">
         <?php foreach ($channels as $channel): ?>
-            <div class="flex flex-col items-center justify-center bg-neutral-800 rounded-lg p-10 hover:bg-neutral-700 transition" onclick="window.location.href='<?= $channel['url']; ?>'">
+            <div class="flex flex-col items-center justify-center bg-neutral-800 rounded-lg p-10 hover:bg-neutral-700 transition" onclick="window.location.href='player.php?channel=<?= $channel['id']; ?>'">
                 <img src="<?= $channel['logo']; ?>" class="max-w-40 max-h-20 rounded-md" alt="<?= $channel['name']; ?>">
             </div>
         <?php endforeach; ?>
