@@ -9,7 +9,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="styles/output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
     <title>TV</title>
 </head>
 <body class="min-h-screen bg-neutral-900 text-white p-8">
