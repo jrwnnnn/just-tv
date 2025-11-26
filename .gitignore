@@ -1,0 +1,11 @@
+node_modules/
+vendor/
+
+.DS_Store
+Thumbs.db
+debug.php
+
+*.log
+*.env
+*.sql
+styles/output.css

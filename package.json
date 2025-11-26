@@ -1,0 +1,25 @@
+{
+  "name": "just-tv",
+  "version": "1.0.0",
+  "description": "<h1 align=\"center\">Project Name</h1>",
+  "homepage": "https://github.com/jrwnnnn/just-tv#readme",
+  "bugs": {
+    "url": "https://github.com/jrwnnnn/just-tv/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrwnnnn/just-tv.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --watch",
+    "build": "npx @tailwindcss/cli -i ./styles/input.css -o ./styles/output.css --minify"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.17",
+    "tailwindcss": "^4.1.17"
+  }
+}
