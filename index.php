@@ -1,6 +1,6 @@
 <?php
     require_once 'functions/connect.php';
-    require_once 'functions/useragent.php';
+    // require_once 'functions/useragent.php';
     $channels = query("SELECT * FROM channels ORDER BY name ASC");
 ?>
 
