@@ -27,9 +27,9 @@
     <div class="flex justify-center bg-black max-h-[80vh]">
         <video id="videoPlayer" class="w-full" controls autoplay playsinline></video>
     </div>
-    <div class="flex justify-between items-center mt-4 px-50">
+    <div class="flex justify-between items-center mt-4 mx-[12.5rem]">
         <img class="w-20 invert scale-x-[-1] hover:cursor-pointer" src="https://cdn-icons-png.flaticon.com/128/15948/15948774.png" onclick="history.replaceState(null, '', 'player.php?channel=<?= $previousChannel ?>'); location.reload();">
-        <img src="<?= $channelData['logo']; ?>" class="max-h-15" alt="<?= $channelData['name']; ?> Logo">
+        <p class="text-center text-4xl font-bold"><?= $channelData['name']; ?></p>
         <img class="w-20 invert hover:cursor-pointer" src="https://cdn-icons-png.flaticon.com/128/15948/15948774.png" onclick="history.replaceState(null, '', 'player.php?channel=<?= $nextChannel ?>'); location.reload();">
     </div>
     
