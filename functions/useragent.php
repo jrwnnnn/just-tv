@@ -9,7 +9,7 @@
              break;
          }
      }
-    if ($allowedClient) {
+    if (!$allowedClient) {
          header('HTTP/1.1 403 Forbidden');
          exit('Access denied: TV clients only.');
     }
