@@ -24,32 +24,25 @@
     <title><?= $channelData['name']; ?> - TV</title>
 </head>
 <body class="min-h-screen bg-neutral-900 text-white">
-    <!-- <div class="flex justify-center bg-black max-h-[80vh]">
-        <video id="videoPlayer" class="w-full" controls autoplay playsinline></video>
-    </div> -->
     <div class="flex justify-center bg-black max-h-[80vh]">
-        <iframe src="<?= $channelData['url']; ?>" class="w-full max-w-4xl h-[500px] border-0" allow="autoplay; fullscreen"></iframe>
+        <video id="hlsPlayer" class="w-full" controls autoplay playsinline></video>
     </div>
-    <div class="flex justify-between items-center mt-4 mx-[12.5rem]">
+    <div class="flex justify-between items-center mt-4 mx-[10rem]">
         <img class="w-20 invert scale-x-[-1] hover:cursor-pointer" src="https://cdn-icons-png.flaticon.com/128/15948/15948774.png" onclick="history.replaceState(null, '', 'player.php?channel=<?= $previousChannel ?>'); location.reload();">
-        <p class="text-center text-4xl font-bold"><?= $channelData['name']; ?></p>
+        <div class="flex flex-col items-center space-y-2">
+            <p class="text-center text-4xl font-bold"><?= $channelData['name']; ?></p>
+            <p class="font-mono text-center text-sm text-neutral-500">Status: <span id="playerStatus">Loading...</span></p>
+        </div>
         <img class="w-20 invert hover:cursor-pointer" src="https://cdn-icons-png.flaticon.com/128/15948/15948774.png" onclick="history.replaceState(null, '', 'player.php?channel=<?= $nextChannel ?>'); location.reload();">
-    </div>
+    </div>    
     
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <script>
-    var video = document.getElementById('videoPlayer');
-    var videoSource = '<?= $channelData['url']; ?>';
-
-    if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoSource);
-        hls.attachMedia(video);
-    } else if (video.canPlayType('application/x-mpegURL')) {
-        video.src = videoSource;
-    } else {
-        console.error('HLS is not supported in this browser.');
-    }
+        var player = document.getElementById('hlsPlayer');
+        var streamUrl = '<?= $channelData['url']; ?>';
+        var playerStatus = document.getElementById('playerStatus');
     </script>
+    <script src="script/hls-handler.js"></script>
+
 </body>
 </html>
