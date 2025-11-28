@@ -10,7 +10,7 @@ WORKDIR /var/www/html/
 COPY package.json package-lock.json* ./
 RUN npm install
 COPY . .
-RUN npm run build
+RUN npm run tailwind:build
 RUN apt-get update && apt-get install -y libmariadb-dev && docker-php-ext-install mysqli
 COPY . /var/www/html/
 EXPOSE 80
