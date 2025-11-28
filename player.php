@@ -25,13 +25,14 @@
     <title><?= $channelData['name']; ?> - TV</title>
 </head>
 <body class="min-h-screen bg-neutral-900 text-white">
-    <div class="flex justify-center bg-black max-h-[80vh]">
+
+    <div class="flex justify-center bg-black min-h-[100vh]">
         <video id="hlsPlayer" class="w-full" controls autoplay playsinline></video>
     </div>
-    <div class="flex justify-between items-center mt-4 mx-[10rem]">
+    <div id="navigation" class="flex justify-between items-center my-4 mx-[10rem]">
         <img class="w-20 invert scale-x-[-1] hover:cursor-pointer" src="https://cdn-icons-png.flaticon.com/128/15948/15948774.png" onclick="history.replaceState(null, '', 'player.php?channel=<?= $previousChannel ?>'); location.reload();">
         <div class="flex flex-col items-center space-y-1">
-            <p class="text-center text-4xl font-bold"><?= $channelData['name']; ?></p>
+            <a class="text-center text-4xl font-bold hover:underline hover:cursor-pointer" href="<?= $channelData['url'] ?>"><?= $channelData['name']; ?></a>
             <span id="currentShow">Loading...</span>
             <div class="flex space-x-5 font-mono text-sm text-neutral-500">
                 <p>Upcoming: <span id="next"></span></p>

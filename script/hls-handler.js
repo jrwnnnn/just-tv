@@ -37,3 +37,12 @@ player.addEventListener("error", () => {
         retryPlayer(player, streamUrl, playerStatus);
     }
 });
+
+window.addEventListener('load', () => {
+    const video = document.querySelector('player');
+    if (video) {
+        video.addEventListener('loadedmetadata', () => {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        });
+    }
+});
