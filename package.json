@@ -1,7 +1,7 @@
 {
   "name": "just-tv",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\">Just TV</h1>",
+  "description": "A simple, lightweight web client for HLS streams.",
   "homepage": "https://github.com/jrwnnnn/just-tv#readme",
   "bugs": {
     "url": "https://github.com/jrwnnnn/just-tv/issues"
@@ -10,13 +10,13 @@
     "type": "git",
     "url": "git+https://github.com/jrwnnnn/just-tv.git"
   },
-  "license": "ISC",
-  "author": "",
+  "license": "MIT",
+  "author": "jrwnnnn_",
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
+    "tailwind:dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "tailwind:build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --minify"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.18"
